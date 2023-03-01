@@ -22,12 +22,18 @@ export default function App() {
 
   }
 
-  const createPassword = (characters:String,passwordLength:number)=>{
-
+  const createPassword = (characters:string,passwordLength:number)=>{
+      let result = ''
+      for (let index = 0; index < passwordLength; index++) {
+        const characterIndex = Math.round(Math.random()* characters.length)
+        result += characters.charAt(characterIndex)
+        
+      }
+      return result
   }
 
   const resetPasswordState = ()=>{
-    
+
   }
 
   return (
